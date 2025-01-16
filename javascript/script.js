@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function(){
             if (parseInt(input.value) > 0) {
                 const label = input.closest('label').textContent.trim().split('\n')[0].trim();
                 const priceElement = input.nextElementSibling;
-                order += `${label} - ${priceElement.textContent} - Quantidade: ${input.value}%A0`; // Use \n para quebra de linha
+                order += `${label} - ${priceElement.textContent} - Quantidade: ${input.value}\n`; // Use \n para quebra de linha
                 anyProduct = true;
             }
         });
