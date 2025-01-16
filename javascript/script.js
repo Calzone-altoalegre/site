@@ -310,27 +310,27 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // Construção do texto usando template string
         pedido = `
-                    Boa noite, me chamo ${nome} e esse é meu pedido:
+Boa noite, me chamo ${nome} e esse é meu pedido:
 
-                    ----------ENDEREÇO----------
+----------ENDEREÇO----------
 
-                    Nome: ${nome}
-                    Bairro: ${bairro}
-                    N°: ${numCasa}
-                    Comentário: ${comentario || "Nenhum"}
-                    Método de Pagamento: ${metodoPagamento}
+Nome: ${nome}
+Bairro: ${bairro}
+N°: ${numCasa}
+Comentário: ${comentario || "Nenhum"}
+Método de Pagamento: ${metodoPagamento}
 
-                    -----------PEDIDO-----------
+-----------PEDIDO-----------
 
-                    ${order}
+${order}
 
-                    -----------------------------
+-----------------------------
 
-                    Valor total: ${totalConta} 
-                    
-                    Taxa de Entrega a Combinar!
+Valor total: ${totalConta} 
 
-                    `;
+Taxa de Entrega a Combinar!
+
+`;
 
         // Codificar a mensagem
         const encodedMessage = encodeURIComponent(pedido);
@@ -431,5 +431,3 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     
 })
-
-
