@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home_style.css">
+    <title>Calzone</title>
+</head>
+<body>
+    <img src="css/img/pizza_background.png" alt="" height="1100px" id="pizza" style="filter: drop-shadow(3px 3px 50px #ffa20071);">
+    
+    <header>
+
+        <div>
+            <h1>Calzone</h1>
+            <p>Experimente o sabor que faz todo mundo voltar!</p>
+            <button id="start">Faça seu Pedido</button>
+        </div>
+
+    </header>
+
+    <img src="css/img/salgado_background.png" alt="" height="900px" id="salgado" style="filter: drop-shadow(3px 3px 5px #7e7e7e);">
+
+    <main>
+
+        <section id="section-1">
+
+            <div class="panel">
+    
+                <div id="panel1-right">
+                    <div><h1>O Lanche que você procura, esta aqui!</h1></div>
+                    <div class="paragrafo">
+                        <p>Aqui você encontra os
+                            lanches que combinam com o seu paladar: Pasteis suculentos,
+                             Pizzas feitas com carinho e com aquele toque único que faz
+                            toda a diferença. Cada mordida é uma explosão de sabor, feita 
+                            com ingredientes frescos. Experimente e descubra o lanche perfeito 
+                            para o seu momento!</p>
+                    </div>
+                    <a href="/site/cardapio.html" id="btn-cardapio">Ver Cardapio</a>
+                </div>
+        
+            </div>
+    
+        </section>
+        
+        <section>
+    
+            <div class="panel-relative">
+
+                <div id="panel2-left">
+                    <h1>Estamos Perto de Você!</h1>
+                    <div class="paragrafo">
+                        <p>Venha nos visitar e aproveite o melhor da nossa lanchonete!
+                            Estamos localizados em um ponto estratégico, fácil de encontrar.
+                             Um ambiente acolhedor espera por você, perfeito para um encontro com amigos ou um lanche rápido.
+                              Não importa onde você esteja, fazemos entrega do seu pedido na porta da sua casa!</p>
+                    </div>
+                </div>
+    
+                <div id="panel2-right"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d683.675646954005!2d-38.48691276740198!3d-3.8576167870865006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c751cb4727134d%3A0x7f8f08076db93b11!2sCalzone!5e0!3m2!1spt-BR!2sbr!4v1736797703382!5m2!1spt-BR!2sbr" width="450" height="355" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        
+        <div id="title-footer-div">
+            <h1 id="footer_title">Calzone</h1>
+            <p id="footer_subtitle" onclick=" window.location.href = 'https://www.linkedin.com/in/gabriel-oliveira-5100b129b' ;" >Criado por Gabriel</p>
+        </div>
+        
+        <div id="footer_links">
+            <a href="/site/" class="footer_link">Home</a>
+            <a href="/site/cardapio.html" class="footer_link">Cardapio</a>
+            <a href="https://wa.me/5585988113671?text=Ola+Gostaria+de+tirar+uma+duvida" class="footer_link">Contato</a>
+        </div>
+        
+    </footer>
+    
+    <script>
+        document.getElementById('start').addEventListener('click', function (){
+            window.location.href = 'cardapio.html'
+        })
+    </script>
+
+</body>
+</html>

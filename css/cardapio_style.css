@@ -1,0 +1,1114 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@font-face {
+    font-family: 'Cowra';
+    src: url('/Cardapio/cowra-font/CowraFreeRegular-R9316.ttf') format('truetype');
+}
+
+:root{
+    --main-background-color: #262020;
+    --secondary-background-color: #302929;
+    --third-background-color: #0B1623;
+    --quarter-background-color: #110904;
+
+    --primary-color: #FFF5F3;
+    --secondary-color: #FFE1DB;
+    --third-color: #FFD6CF;
+    --quater-color: #806e6ba3;
+
+    --borda: 1px solid white;
+
+    /* Fontes */
+
+    --cowra: 'Cowra', serif;
+    --oswald: "Oswald", serif;
+    --roboto:"Roboto Mono", serif;
+    --ubuntu: "Ubuntu", serif;
+    --anton: "Anton", serif;
+    --poppins: "Poppins", serif;
+
+    /* Brands tamanho*/
+    --height: 20rem;
+    --width: 20rem;
+    --space-beetween: 15px;
+
+    /* Sections tamanho*/
+
+    --height-section: auto;
+    --width-section: 100%;
+    --margin-bottom-section: 60px;
+
+    /* Produtos tamanho*/
+
+    --height-produto: 660px;
+    --width-produto: 60vw;
+    --font-size-produto: 45px;
+    --img-size-background: 660px;
+
+    --width-produto-left: 40vw;
+    --width-produto-right: 40vw;
+
+    /* Secondarys Sections tamanho*/
+
+    --height-secondary-section: 950px;
+
+    /* Cards */
+
+    --height-card: 450px;
+    --width-card: 400px;
+
+    /* Fonts Sizes */
+
+    --title-size: 90px;
+    --subtitle-size: 25px;
+
+    /* Footer Sizes */
+
+    --footer-height: 200px;
+    --footer-width: 100%;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* sem scroll eixo x com border*/
+}
+  
+body {
+    height: 100vh;
+    width: 100%; /* Usa apenas a largura útil */
+    margin: 0;
+}
+
+#main-title{
+    color: rgb(0, 0, 0);
+    margin: 0 15px;
+    font-family: var(--poppins);
+    font-size: xx-large;
+}
+
+a{
+    display: flex;
+    align-items: end;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: var(--poppins);
+    font-size: large;
+    font-weight: bold;
+    margin: 0 15px;
+    padding-bottom: 5px;
+    height: 100%;
+    transition: border-bottom 0.15s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    background-color: #faad2ad9;
+}
+
+#navlinks{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navlinks a:hover{
+    border-bottom: 3px solid white;
+    font-size: x-large;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 8%;
+    width: 100%;
+    box-shadow: 1px 1px 10px gray;
+}
+
+#header-logo{
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-family: var(--poppins);
+    margin-left: 15px;
+}
+
+
+#header-info{
+    display: flex;
+    margin: 0 auto;
+}
+
+#header-social-medias {
+    position: absolute;
+    right: 0;
+    margin: 0 20px;
+}
+
+#header-social-medias img{
+    margin: 0 10px;
+    transition: transform 0.2s ease-in;
+}
+
+#header-social-medias img:hover{
+    transform: scale(1.2);
+}
+
+.panel{
+    display: flex;
+    margin: 0 15px;
+}
+
+.outdoor{
+    display: flex;
+    margin: 0 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.outdoor h3{
+    font-family: var(--ubuntu);
+    font-size: large;
+    color: rgb(40, 40, 40);
+    font-weight: 400;
+}
+
+.outdoor p{
+    font-family: var(--roboto);
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(97, 97, 97);
+}
+
+section{
+    height: var(--height-section);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.title-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+section h1{
+    font-family: var(--poppins);
+    font-size: 45px;
+}
+
+section h3{
+    margin-top: 20px;
+    font-family: var(--ubuntu);
+    font-size: medium;
+    color: rgb(57, 57, 57);
+}
+
+/* ---------------- INPUT NUMBER --------------- */
+
+input[type="number"]{
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
+/* ---------------- TITULOS --------------- */
+
+.title-produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-produto h2{
+    font-family: var(--ubuntu);
+    font-size: 40px;
+}
+
+.title-produto p{
+    font-family: var(--ubuntu);
+    margin-top: 15px;
+}
+
+/* ---------------- PANEL CARDAPIO --------------- */
+
+.panel-cardapio {
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* ---------------- ITEM --------------- */
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente no centro */
+    margin-top: 20px;
+    font-family: var(--poppins);
+    font-size: larger;
+}
+
+.item div{
+    display: flex;
+}
+
+.item-preço{
+    display: flex;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.item-preço p{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: var(--ubuntu);
+    color: rgb(46, 46, 46);
+}
+
+.produtos h6{
+    color: rgb(59, 59, 59);
+    font-family: var(--ubuntu);
+    font-size: small;
+}
+
+.produtos div{
+    margin-top: 5px;
+}
+
+/* ------------------ SALGADO ------------------ */
+
+.panel-produto-salgado{
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgb(240, 237, 237);
+    border-radius: 40px;
+    height: 400px;
+    width: var(--width-produto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-left-salgado{
+    height: 100%;
+    width: 50%;
+    border-radius: 40px;
+    /* No github tem que adicionar o ./ do diretorio */
+    background-image: url("img/salgado4.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* ------------------ PASTEL ------------------ */
+
+.panel-produto-pastel, .panel-produto-calzone {
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgb(240, 237, 237);
+    border-radius: 40px;
+    height: 1250px;
+    width: var(--width-produto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.panel-right-pastel{
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    background-image: url("img/pastel2.jpg");
+    background-size: cover;
+}
+
+/* ------------------ PIZZA ------------------ */
+
+.panel-produto-pizza {
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgb(240, 237, 237);
+    border-radius: 40px;
+    height: 1050px;
+    width: var(--width-produto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.panel-left-pizza{
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    background-image: url("img/pizza4.jpg");
+    background-size: cover;
+}
+
+/* ------------------ CALZONE ------------------ */
+
+.panel-produto-calzone{
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgb(240, 237, 237);
+    border-radius: 40px;
+    height: 1050px;
+    width: var(--width-produto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.panel-right-calzone{
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    background-image: url("img/calzone4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------ BEBIDAS ------------------ */
+
+.panel-produto-bebidas{
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgb(240, 237, 237);
+    border-radius: 40px;
+    height: 600px;
+    width: var(--width-produto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.panel-left-bebidas{
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    background-image: url("img/refrigerante2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------ ACOMPANHAMENTOS ------------------ */
+
+.panel-produto-acompanhamentos{
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgb(240, 237, 237);
+    border-radius: 40px;
+    height: 400px;
+    width: var(--width-produto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-right-acompanhamentos{
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    background-image: url("img/acompanhamentos2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------ DELIVERY ------------------ */
+
+.panel-produto-delivery{
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgb(240, 237, 237);
+    border-radius: 40px;
+    height: 400px;
+    width: var(--width-produto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-cardapio-delivery{
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.panel-right-delivery{
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    background-image: url("img/foto_delivery.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#taxa_entrega{
+    font-size: x-large;
+    font-family: var(--poppins);
+}
+
+/* ------------------ FOOTER ------------------ */
+
+footer{
+    box-shadow: 1px 1px 10px gray;
+    margin-top: 40px;
+    position: sticky;
+    bottom: 0;
+    height: 220px;
+    width: 100%;
+    background-color: rgb(240, 237, 237);
+}
+
+
+#panel-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------ Valor Compra ------------------ */
+
+#valor-total{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#valor-total h2{
+    font-family: var(--poppins);
+}
+
+/* ------------------ Div ------------------ */
+
+#dados{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* ------------------ Endereço ------------------ */
+
+.endereco{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-nome{
+    display: flex;
+}
+
+.form-nome p, .form-endereco p{
+    margin: 0 10px;
+}
+
+.form-endereco{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.form-endereco div {
+    display: flex;
+    margin-top: 5px;
+}
+
+#num-casa, #bairro{
+    height: 25px;
+}
+
+#div-num-casa{
+    margin-top: 10px;
+}
+
+#div-comentario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#comentario{
+    height: 100px;
+}
+
+#num-casa{
+    width: 40px;
+    margin-left: 30px;
+}
+
+/* ------------------ Botões ------------------ */
+
+#btns {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+#btns button{
+    width: 90px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px grey;
+}
+
+#btns p, .form-nome p, .endereco p{
+    font-family: var(--poppins);
+    font-weight: bold;
+}
+
+#enviar{
+    width: 130px !important;
+}
+
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (max-width: 600px) {
+
+    #main-title{
+        font-size: small;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    #navlinks a:hover{
+        border-bottom: 3px solid white;
+        font-size: medium;
+    }
+
+    header{
+        height: 190px;
+    }
+
+    #header-logo{
+        font-size: 9px;
+    }
+
+    #header-info{
+        flex-direction: column;
+    }
+
+    #logo-img{
+        height: 30px;
+    }
+
+    .img-cell-header{
+        height: 20px;
+    }
+
+    .panel{
+        margin-top: 15px;
+    }
+
+    .outdoor h3{
+        font-size: 10px;
+    }
+
+    .outdoor p{
+        font-size: 15px;
+    }
+
+    #header-social-medias img{
+        height: 20px;
+        margin-top: 20px;
+        display: flex;
+    }
+
+    /* ---------------- INPUT NUMBER --------------- */
+
+    input[type="number"]{
+        width: 35px;
+        height: 30px;
+    }
+
+    /* ------------------ Titulo ------------------ */
+
+    section h1{
+        font-size: larger;
+    }
+
+    section h3{
+        font-size: 10px;
+    }
+
+    .title-produto h2{
+        font-size: xx-large;
+    }
+
+    .title-produto p{
+        font-size: small;
+    }
+
+    /* ---------------- PANEL CARDAPIO --------------- */
+
+    .panel-cardapio {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* ---------------- ITEM --------------- */
+
+    .item{
+        width: 320px;
+        font-size: 14px;
+    }
+
+    .item-preço{
+        gap: 3px;
+    }
+
+    .item-preço p{
+        font-size: 10px;
+    }
+
+    .produtos h6{
+        font-size: 10px;
+    }
+
+    /* ------------------ SALGADO ------------------ */
+
+    .panel-produto-salgado{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .panel-left-salgado{
+        height: 400px;
+        width: 100%;
+    }
+
+    /* ------------------ PASTEL ------------------ */
+
+    .panel-produto-pastel{
+        width: 95%;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 1700px;
+    }
+
+    .panel-right-pastel{
+        height: 400px;
+        width: 100%;
+    }
+
+    /* ------------------ PIZZA ------------------ */
+
+    .panel-produto-pizza {
+        height: 1450px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-left-pizza{
+        background-position: center;
+        height: 400px;
+        width: 100%;
+    }
+
+    /* ------------------ CALZONE ------------------ */
+
+    .panel-produto-calzone{
+        width: 95%;
+        flex-direction: column-reverse;
+        height: 1400px;
+    }    
+
+    .panel-right-calzone{
+        width: 100%;
+        height: 400px;
+    }
+
+    /* ------------------ BEBIDAS ------------------ */
+
+    .panel-produto-bebidas{
+        height: 850px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-left-bebidas{
+        width: 100%;
+        height: 400px;
+    }
+
+    /* ------------------ ACOMPANHAMENTOS ------------------ */
+
+    .panel-produto-acompanhamentos{
+        height: 600px;
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .panel-right-acompanhamentos{
+        width: 100%;
+        height: 400px;
+    }
+
+    /* ------------------ Delivery ------------------ */
+
+    .panel-produto-delivery{
+        height: 600px;
+        width: 95%;
+        flex-direction: column-reverse;
+    }
+
+    .panel-cardapio-delivery{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .panel-right-delivery{
+        width: 100%;
+        height: 400px;
+    }
+
+    #taxa_entrega{
+        text-align: center;
+        font-size: large;
+        font-family: var(--poppins);
+    }
+
+    /* ------------------ FOOTER ------------------ */
+
+    footer{
+        height: 390px;
+        margin-top: 40px;
+        position: static;
+    }
+
+    /* ------------------ Div ------------------ */
+
+    #dados{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* ------------------ Endereço ------------------ */
+
+    .endereco{
+        width: 100vw;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-endereco{
+        flex-direction: column;
+    }
+
+    #div-comentario{
+        width: 100vw;
+        height: 100px;
+    }
+
+    #comentario{
+        width: 60%;
+    }
+
+    #div-num-casa{
+        margin-top: 5px;
+    }
+
+    /* ------------------ Botões ------------------ */
+
+    #btns {
+        margin-top: 25px;
+        display: flex;
+        width: 90vw;
+    }
+
+    #btns button{
+        width: 90px;
+        margin-left: 5px;
+    }
+
+}
+
+/* Estilos para tablets (telas com largura entre 601px e 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px)  {
+    #main-title{
+        font-size: x-large;
+    }
+
+    a{
+        font-size: 15px;
+    }
+
+    #navlinks a:hover{
+        border-bottom: 3px solid white;
+        font-size: medium;
+    }
+
+    header{
+        height: 190px;
+    }
+
+    #header-logo{
+        font-size: medium;
+    }
+
+    #logo-img{
+        height: 60px;
+    }
+
+    .img-cell-header{
+        height: 30px;
+    }
+
+    .panel{
+        margin-top: 15px;
+    }
+
+    .outdoor h3{
+        font-size: 15px;
+    }
+
+    .outdoor p{
+        font-size: 12px;
+    }
+
+    #header-social-medias img{
+        height: 30px;
+        margin-top: 20px;
+        display: flex;
+    }
+
+    /* ---------------- INPUT NUMBER --------------- */
+
+    input[type="number"]{
+        width: 35px;
+        height: 30px;
+    }
+
+    /* ------------------ Titulo ------------------ */
+
+    section h1{
+        font-size: 40px;
+    }
+
+    section h3{
+        font-size: 15px;
+    }
+
+    .title-produto h2{
+        font-size: xx-large;
+    }
+
+    .title-produto p{
+        font-size: small;
+    }
+
+    /* ---------------- PANEL CARDAPIO --------------- */
+
+    .panel-cardapio {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* ---------------- ITEM --------------- */
+
+    .item{
+        width: 320px;
+        font-size: large;
+    }
+
+    .item-preço{
+        gap: 3px;
+    }
+
+    .item-preço p{
+        /* border: 1px solid red; */
+        font-size: 10px;
+    }
+
+    .produtos h6{
+        font-size: 9px;
+    }
+
+    /* ------------------ SALGADO ------------------ */
+
+    .panel-produto-salgado{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+    }
+
+    .panel-left-salgado{
+        height: 600px;
+        width: 100%;
+    }
+
+    /* ------------------ PASTEL ------------------ */
+
+    .panel-produto-pastel{
+        width: 95%;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 1700px;
+    }
+
+    .panel-right-pastel{
+        height: 400px;
+        width: 100%;
+        background-position-y: 30%;
+    }
+
+    /* ------------------ PIZZA ------------------ */
+
+    .panel-produto-pizza {
+        height: 1450px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-left-pizza{
+        background-position: center;
+        height: 400px;
+        width: 100%;
+    }
+
+    /* ------------------ CALZONE ------------------ */
+
+    .panel-produto-calzone{
+        width: 95%;
+        flex-direction: column-reverse;
+        height: 1400px;
+    }    
+
+    .panel-right-calzone{
+        width: 100%;
+        height: 400px;
+        background-position-y: 20%;
+    }
+
+    /* ------------------ BEBIDAS ------------------ */
+
+    .panel-produto-bebidas{
+        height: 850px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-left-bebidas{
+        width: 100%;
+        height: 400px;
+        background-position-y: -490px;
+    }
+
+    /* ------------------ ACOMPANHAMENTOS ------------------ */
+
+    .panel-produto-acompanhamentos{
+        height: 600px;
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .panel-right-acompanhamentos{
+        width: 100%;
+        height: 400px;
+        background-position-y: -100px;
+    }
+
+    /* ------------------ Delivery ------------------ */
+
+    .panel-produto-delivery{
+        height: 600px;
+        width: 95%;
+        flex-direction: column-reverse;
+    }
+
+    .panel-right-delivery{
+        width: 100%;
+        height: 400px;
+        background-position-y: -400px;
+    }
+
+    /* ------------------ FOOTER ------------------ */
+
+    footer{
+        height: 320px;
+        margin-top: 40px;
+        
+        position: static;
+    }
+
+    /* ------------------ Div ------------------ */
+
+    #dados{
+        flex-direction: column;
+        
+    }
+
+    /* ------------------ Endereço ------------------ */
+
+    .endereco{
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-endereco{
+        flex-direction: column;
+    }
+
+    #div-num-casa{
+        margin-top: 5px;
+    }
+    /* ------------------ Botões ------------------ */
+
+    #btns {
+        
+        margin-top: 25px;
+        display: flex;
+        width: 100vw;
+    }
+
+    #btns button{
+        width: 90px;
+        margin-left: 5px;
+    }
+}

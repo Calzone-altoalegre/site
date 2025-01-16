@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Cowra';
+    src: url('/Cardapio/cowra-font/CowraFreeRegular-R9316.ttf') format('truetype');
+}
+
+:root{
+    --main-background-color: #262020;
+    --secondary-background-color: #302929;
+    --third-background-color: #0B1623;
+    --quarter-background-color: #110904;
+
+    --primary-color: #f79917d9;
+    --secondary-color: #ffbf00;
+    --third-color: #FFD6CF;
+    --quater-color: #806e6ba3;
+
+    --borda: 1px solid white;
+
+    /* Fontes */
+
+    --cowra: 'Cowra', serif;
+    --bebas-neue:"Bebas Neue", serif;
+    --oswald: "Oswald", serif;
+    --roboto:"Roboto Mono", serif;
+    --ubuntu: "Ubuntu", serif;
+    --anton: "Anton", serif;
+    --poppins: "Poppins", serif;
+
+    /* Brands tamanho*/
+    --height: 20rem;
+    --width: 20rem;
+    --space-beetween: 15px;
+
+    /* Sections tamanho*/
+
+    --height-section: auto;
+    --width-section: 100%;
+    --margin-bottom-section: 60px;
+
+    /* Produtos tamanho*/
+
+    --height-produto: 660px;
+    --width-produto: 60vw;
+    --font-size-produto: 45px;
+    --img-size-background: 660px;
+
+    --width-produto-left: 40vw;
+    --width-produto-right: 40vw;
+
+    /* Secondarys Sections tamanho*/
+
+    --height-secondary-section: 950px;
+
+    /* Cards */
+
+    --height-card: 450px;
+    --width-card: 400px;
+
+    /* Fonts Sizes */
+
+    --title-size: 90px;
+    --subtitle-size: 25px;
+
+    /* Footer Sizes */
+
+    --footer-height: 200px;
+    --footer-width: 100%;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* sem scroll eixo x com border*/
+}
+
+#pizza{
+    position: absolute;
+    right: -400px;
+    bottom: 40px;
+}
+
+#salgado{
+    position: absolute;
+    left: -200px;
+    transform: rotate(180deg);
+    z-index: -99999;
+}
+  
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%; /* Usa apenas a largura útil */
+    margin: 0;
+    background-image: url("img/background_image.jpg");
+}
+
+
+/* HEADER */
+header{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 900px;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    height: 70%;
+    width: 50%;
+}
+
+header h1{
+    color: white;
+    font-family: var(--bebas-neue);
+    font-size: 250px;
+    filter: drop-shadow(1px 1px 5px rgb(0, 0, 0));
+}
+
+header p {
+    color: rgb(255, 255, 255);
+    font-family: var(--bebas-neue);
+    font-size: 30px;
+    filter: drop-shadow(1px 1px 5px rgb(0, 0, 0));
+}
+
+header button {
+    margin-top: 40px;
+    border: none;
+    border-radius: 15px;
+    height: 50px;
+    width: 200px;
+    font-family: var(--oswald);
+    font-weight: bold;
+    font-size: large;
+    background-color: var(--secondary-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+header button:hover {
+    transform: scale(1.1);
+}
+
+/* SECTION */
+
+section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100vw;
+}
+
+.panel{
+    /* background-color: var(--primary-color); */
+    /* box-shadow: 1px 1px 5px grey; */
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 70vw;
+}
+
+.panel-relative{
+    position: absolute;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100vw;
+}
+
+
+#panel1-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+}
+
+#panel2-left{
+    position: relative;
+    left: 50%;
+    transform: translateX(-70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+#panel1-right h1 , #panel2-left h1 {
+    font-family: var(--oswald);
+    color: white;
+    font-size: 60px;
+}
+
+#panel1-right p, #panel2-left p {
+    margin-top: 20px;
+    text-align: center;
+    font-family: var(--oswald);
+    font-size: large;
+    color: white;
+}
+
+.paragrafo{
+    width: 80%;
+}
+
+#panel1-left {
+    /* background-image: url("/Cardapio/img/pastel_home2.jpg"); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    height: 100%;
+    width: 30%;
+}
+
+#btn-cardapio{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    text-decoration: none;
+    height: 40px;
+    width: 150px;
+    background-color: var(--secondary-color);
+    color: black;
+    font-family: var(--bebas-neue);
+}
+
+#btn-cardapio:hover {
+    background-color: rgb(255, 223, 163);
+}
+
+/*  Section 2 */
+
+#panel2-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 450px;
+}
+
+#panel2-right iframe {
+    position: absolute;
+    right: 30px;
+    border-radius: 30px;
+    margin-left: 2px;
+}
+
+/* FOOTER */
+#footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--quarter-background-color);
+    height: 100px;
+    width: 100%;
+}
+
+#title-footer-div {
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+}
+
+#title-footer-div p {
+    text-decoration: underline;
+}
+
+#footer_title{
+    color: var(--third-color);
+    font-family: var(--bebas-neue);
+    font-size: 50px;
+}
+
+#footer_subtitle{
+    color: var(--third-color);
+    font-family: var(--oswald);
+    font-size: large;
+}
+
+#footer_links{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+#footer_links a {
+    text-decoration: none;
+    font-size: x-large;
+    font-family: var(--oswald);
+    margin-right: 20px;
+}
+
+.footer_link{
+    color: var(--third-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer_link:hover{
+    border: none;
+    font-weight: bold;
+    transform: scale(1.1);
+    text-decoration: underline ;
+}
+
+@media only screen and (max-width: 600px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        height: 2000px;
+        border: var(--borda);
+        overflow-x: hidden;
+    }
+
+    #pizza {
+        height: 400px;
+        right: -230px;
+        top: -150px;
+        z-index: -99999;
+    }
+
+    #salgado{
+        display: none;
+    }
+
+    /* HEADER  */
+    header {
+        justify-content: center;
+        width: 100vw;
+        height: 700px;
+    }
+
+    header div {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    header h1{
+        font-size: 120px;
+    }
+
+    header p {
+        
+        text-align: center;
+    }
+
+    /* PANEL */
+
+    .panel{
+        margin-top: 50px;
+        height: 400px;
+        width: 100vw;
+    }
+
+    .paragrafo{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    #panel1-right h1 , #panel2-left h1 {
+        width: 100vw;
+        font-size: 45px;
+        text-align: center;
+    }
+
+    #panel1-right p, #panel2-left p {
+        width: 90vw;
+    }
+
+    /* PANEL 2 */
+
+    .panel-relative{
+        position: relative;
+        margin-top: 700px;
+        height: 700px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #panel2-left{
+        position: absolute;
+        top: 0;
+        margin-left: 18%; 
+        height: 50%;
+        width: 90vw;
+    }
+
+    #panel2-right {
+        bottom: 0;
+        margin-top: 50px;
+        height: 50%;
+        width: 90vw;
+    }
+
+    #panel2-right iframe {
+        position: absolute;
+        bottom: 20%;
+        left: 5%;
+        height: 200px;
+        width: 90%;
+    }
+
+
+    /* FOOTER */
+
+    #footer{
+        position:absolute;
+        bottom: 0;
+    }
+
+    #footer_links{
+        margin-left: 40px;
+    }
+
+    #footer_title{
+        font-size: 20px;
+    }
+
+    #footer_subtitle{
+        font-size: small;
+    }
+
+    #footer_links a {
+        font-size: small;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+}
