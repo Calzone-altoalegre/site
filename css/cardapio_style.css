@@ -251,7 +251,7 @@ input[type="number"]{
 /* ---------------- PANEL CARDAPIO --------------- */
 
 .panel-cardapio {
-    width: 50%;
+    width: 60%;
     height: 100%;
     border-radius: 40px;
     display: flex;
@@ -419,7 +419,7 @@ input[type="number"]{
     box-shadow: 1px 1px 5px gray;
     background-color: rgb(240, 237, 237);
     border-radius: 40px;
-    height: 400px;
+    height: 1000px;
     width: var(--width-produto);
     display: flex;
     justify-content: center;
@@ -775,7 +775,7 @@ footer{
     /* ------------------ ACOMPANHAMENTOS ------------------ */
 
     .panel-produto-acompanhamentos{
-        height: 600px;
+        height: 1300px;
         width: 95%;
         flex-direction: column;
     }
@@ -1042,7 +1042,7 @@ footer{
     /* ------------------ ACOMPANHAMENTOS ------------------ */
 
     .panel-produto-acompanhamentos{
-        height: 600px;
+        height: 1300px;
         width: 95%;
         flex-direction: column;
     }

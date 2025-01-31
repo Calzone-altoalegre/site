@@ -6,24 +6,89 @@ document.addEventListener('DOMContentLoaded', function(){
     let order = ""
 
     let totalConta = 0
+    let totalItens = 0
+    let metade_pizzas = 0
 
-    let anyProduct = false
+    let pizzaPassed = false
     let dinheiro_active = false;
     let pix_active = false;
     let cartao_active = false;
+    let metade_valores = [];
 
     let inputs = document.querySelectorAll('input[type="number"]');
+    let inputs_metades = document.querySelectorAll(".metade")
 
     // Para cada input, definimos o valor como 0
     inputs.forEach(input => {
         input.value = 0; // Zera o valor
     });
 
+    // Chamar função somaPedido para modificar conta do pedido
     inputs.forEach(input => {
-        input.addEventListener('input', somaPedido); // Chamará a função somaPedido ao modificar o valor
+        input.addEventListener('input', somarItens); 
     });
+
+    // Chama cada input para cada metade de pizzas
+    inputs_metades.forEach(input2 =>{
+        input2.addEventListener('input', () => {
+            metade_pizzas = 0
+            //Adicionando o valor no vetor se for maior que -1
+            if(input2.value > -1 && input2.value != 0){
+                // Adicionando
+                // Selecionar o preço relacionado ao input
+                const subtitle = input2.nextElementSibling;
+                const price = subtitle.nextElementSibling
+                metade_valores.push(parseFloat(price.textContent)) 
+            }
+
+            //Remove se o valor for zero
+            if(input2.value == 0){
+                // Removendo
+                const subtitle = input2.nextElementSibling;
+                const price = subtitle.nextElementSibling
+                const price_float = parseFloat(price.textContent)
+
+                /* Loop para remover o valor especifico */
+                for (var i = 0; i <= metade_valores.length; i++) {
+                    if(metade_valores[i] == price_float){
+                        console.log("Removendo valor especifico")
+                        metade_valores.splice(i,1);
+                    }
+                }
+            }
+
+            /* Depois de passar por todos inputs */
+            /* Somar valores das metades das pizzas */
+            let vector = metade_valores
+            if(metade_valores.length % 2 == 0){
+                // Par
+                /* Implementar solução para escolher valores  */
+                /* De acorco com metade_valores.length /2 */
+                /* Percorer e pegar o maior valor e dobrar */
+                let sortedVector = [...vector].sort((a, b) => a - b);
+                let maxValues = sortedVector.slice(vector.length/2);
+                let dobradoMaValues = maxValues.map((valor) => valor * 2)
+                //console.log("Valores dobrados: "+dobradoMaValues);
+
+                /* Adcionando valores na conta */
+                for (var i = 0; i < dobradoMaValues.length; i++) {
+                    metade_pizzas += dobradoMaValues[i];
+                }
+            
+                console.log("Total a ser adicionado: "+metade_pizzas)
+                pizzaPassed = true
+            } else {
+                //console.log("impar")
+                pizzaPassed = false
+            }
+
+            setPedido()
+
+        })
+    })
     
-    function somaPedido() {
+    //Soma todos os itens
+    function somarItens() {
         let total = 0;
     
         //IDs Salgados
@@ -95,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let pizzaPortuguesa = document.getElementById('pizza-portuguesa')
         let pizzaMarguerita = document.getElementById('pizza-marguerita')
         let pizzaMussarela = document.getElementById('pizza-mussarela')
-        let pizzaBancon = document.getElementById('pizza-bacon')
+        let pizzaBacon = document.getElementById('pizza-bacon')
         let pizzaChocolate = document.getElementById('pizza-chocolate')
 
         //IDS CALZONE
@@ -127,8 +192,18 @@ document.addEventListener('DOMContentLoaded', function(){
         let sucoAcerola = document.getElementById('suco-acerola')
         
         //IDS ACOMPANHAMENTOS   
-        let creamCheese = document.getElementById('cream-cheese')
+        let milho = document.getElementById('milho')
+        let cebola = document.getElementById('cebola')
+        let azeitona = document.getElementById('azeitona')
+        let ovo = document.getElementById('ovo')
+        let calabresa = document.getElementById('calabresa')
+        let carne = document.getElementById('carne')
+        let queijo = document.getElementById('queijo')
+        let presunto = document.getElementById('presunto')
         let bacon = document.getElementById('bacon')
+        let catupiry = document.getElementById('catupiry')
+        let ricota = document.getElementById('ricota')
+        let creamCheese = document.getElementById('cream-cheese')
         let maionese = document.getElementById('maionese')
         let ketchup = document.getElementById('ketchup')
 
@@ -205,8 +280,8 @@ document.addEventListener('DOMContentLoaded', function(){
         total += (parseInt(pizzaPortuguesa.value) || 0) * 30.50;
         total += (parseInt(pizzaMarguerita.value) || 0) * 29.00;
         total += (parseInt(pizzaMussarela.value) || 0) * 26.50;
-        total += (parseInt(pizzaBancon.value) || 0) * 30.00;
-        total += (parseInt(pizzaChocolate.value) || 0) * 30.00;
+        total += (parseInt(pizzaBacon.value) || 0) * 30.00;
+        total += (parseInt(pizzaChocolate.value) || 0) * 30.00;    
         
         //CALZONES
         total += (parseInt(calzoneFrango.value) || 0) * 17.50;
@@ -236,18 +311,27 @@ document.addEventListener('DOMContentLoaded', function(){
         total += (parseInt(sucoAcerola.value) || 0) * 4.00;
 
         //ACOMPANHAMENTOS
+        total += (parseInt(milho.value) || 0) * 2.00;
+        total += (parseInt(cebola.value) || 0) * 2.00;
+        total += (parseInt(azeitona.value) || 0) * 2.00;
+        total += (parseInt(ovo.value) || 0) * 2.00;
+        total += (parseInt(calabresa.value) || 0) * 4.00;
+        total += (parseInt(carne.value) || 0) * 4.00;
+        total += (parseInt(queijo.value) || 0) * 4.00;
+        total += (parseInt(presunto.value) || 0) * 4.00;
+        total += (parseInt(catupiry.value) || 0) * 3.00;
+        total += (parseInt(ricota.value) || 0) * 4.00;
         total += (parseInt(creamCheese.value) || 0) * 4.00;
-        total += (parseInt(bacon.value) || 0) * 4.00;
         total += (parseInt(maionese.value) || 0) * 0.00;
         total += (parseInt(ketchup.value) || 0) * 0.00;
 
         // Atualiza o valor total na página
-        totalConta = total
+        totalItens = total
 
         //Atualizar os valores dos pasteis 
 
         // Iteração para capturar os produtos
-        inputs.forEach(input => {
+        /* inputs.forEach(input => {
             if (parseInt(input.value) > 0) {
                 const label = input.closest('label').textContent.trim().split('\n')[0].trim();
                 // Selecionar o preço relacionado ao input
@@ -255,11 +339,23 @@ document.addEventListener('DOMContentLoaded', function(){
                 order = `${label} - ${priceElement.textContent} - Quantidade: ${input.value} \n  `; // Use \n para quebra de linha
                 console.log(order)
             }
-        });
+        }); */
 
-        document.getElementById('total-value').textContent = `R$ ${total.toFixed(2)}`;
+        setPedido()        
     }
-  
+
+    //Atualizando Valores do Pedido
+    function setPedido (){
+        totalConta = totalItens + metade_pizzas
+
+        console.log('totalItens: '+totalItens)
+        console.log('metade_pizzas: '+metade_pizzas)
+
+        document.getElementById('total-value').textContent = `R$ ${totalConta.toFixed(2)}`;
+    }
+
+
+    //Enviando para Whatsapp
     document.getElementById('enviar').addEventListener('click', function () {
         let pedido = "";
         let order = "";
@@ -282,6 +378,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if (!anyProduct) {
             alert("Selecione algum produto no cardápio!");
+            return;
+        }
+
+        if(!pizzaPassed){
+            alert("Você não pode comprar a metade de uma pizza!");
             return;
         }
 
@@ -332,6 +433,9 @@ Taxa de Entrega a Combinar!
 
 `;
 
+        //Printando pedido no console
+        console.log(pedido)
+
         // Codificar a mensagem
         const encodedMessage = encodeURIComponent(pedido);
 
@@ -341,7 +445,6 @@ Taxa de Entrega a Combinar!
         // Abrir o WhatsApp
         window.open(whatsappLink, '_blank');
     });
-
 
     /*           BOTOES              */
     let dinheiro = document.getElementById('dinheiro'); // Primeiro, pegamos o elemento
