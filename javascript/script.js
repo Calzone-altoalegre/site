@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let totalItens = 0
     let metade_pizzas = 0
 
-    let pizzaPassed = false
+    let pizzaPassed = true
     let dinheiro_active = false;
     let pix_active = false;
     let cartao_active = false;
