@@ -211,12 +211,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // Somar o total de cada input, caso haja um valor inserido
         //Salgado
-        total += (parseInt(salgadoQueijo.value) || 0) * 3.50;
-        total += (parseInt(salgadoCarne.value) || 0) * 3.50;
-        total += (parseInt(salgadoMisto.value) || 0) * 3.50;
-        total += (parseInt(salgadoFrango.value) || 0) * 3.50;
-        total += (parseInt(salgadoEnroladinho.value) || 0) * 3.50;
-        total += (parseInt(salgadoCoxinha.value) || 0) * 3.50;
+        total += (parseInt(salgadoQueijo.value) || 0) * 4.00;
+        total += (parseInt(salgadoCarne.value) || 0) * 4.00;
+        total += (parseInt(salgadoMisto.value) || 0) * 4.00;
+        total += (parseInt(salgadoFrango.value) || 0) * 4.00;
+        total += (parseInt(salgadoEnroladinho.value) || 0) * 4.00;
+        total += (parseInt(salgadoCoxinha.value) || 0) * 4.00;
 
         //Pastel
         total += (parseInt(pastelFrangoM.value) || 0) * 10.00;
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function(){
         total += (parseInt(coca2l.value) || 0) * 14.00;
         total += (parseInt(guarana1l.value) || 0) * 8.00;
         total += (parseInt(saoGeraldo1l.value) || 0) * 9.00;
-        total += (parseInt(saoGeraldo2l.value) || 0) * 15.00;
+        total += (parseInt(saoGeraldo2l.value) || 0) * 13.00;
         total += (parseInt(cocaLata.value) || 0) * 5.00;
         total += (parseInt(saoGeraldoLata.value) || 0) * 5.00;
         total += (parseInt(sucoGoiaba.value) || 0) * 4.00;
