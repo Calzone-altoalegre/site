@@ -219,90 +219,90 @@ document.addEventListener('DOMContentLoaded', function(){
         total += (parseInt(salgadoCoxinha.value) || 0) * 3.50;
 
         //Pastel
-        total += (parseInt(pastelFrangoM.value) || 0) * 7.50;
-        total += (parseInt(pastelFrangoG.value) || 0) * 10.00;
+        total += (parseInt(pastelFrangoM.value) || 0) * 10.00;
+        total += (parseInt(pastelFrangoG.value) || 0) * 12.50;
         
 
-        total += (parseInt(pastelFrangoCatupiryM.value) || 0) * 8.00;
-        total += (parseInt(pastelFrangoCatupiryG.value) || 0) * 13.50;
+        total += (parseInt(pastelFrangoCatupiryM.value) || 0) * 10.50;
+        total += (parseInt(pastelFrangoCatupiryG.value) || 0) * 16.00;
 
-        total += (parseInt(pastelFrangoCreamCheeseM.value) || 0) * 11.50;
-        total += (parseInt(pastelFrangoCreamCheeseG.value) || 0) * 16.50;
+        total += (parseInt(pastelFrangoCreamCheeseM.value) || 0) * 14.50;
+        total += (parseInt(pastelFrangoCreamCheeseG.value) || 0) * 18.50;
 
-        total += (parseInt(pastelCarneM.value) || 0) * 7.50;
-        total += (parseInt(pastelCarneG.value) || 0) * 12.00;
+        total += (parseInt(pastelCarneM.value) || 0) * 10.00;
+        total += (parseInt(pastelCarneG.value) || 0) * 14.50;
         
-        total += (parseInt(pastelQueijoM.value) || 0) * 7.50;
-        total += (parseInt(pastelQueijoG.value) || 0) * 8.50;
+        total += (parseInt(pastelQueijoM.value) || 0) * 10.00;
+        total += (parseInt(pastelQueijoG.value) || 0) * 11.00;
 
-        total += (parseInt(pastelModaM.value) || 0) * 8.50;
-        total += (parseInt(pastelModaG.value) || 0) * 15.00;
+        total += (parseInt(pastelModaM.value) || 0) * 11.00;
+        total += (parseInt(pastelModaG.value) || 0) * 17.50;
 
-        total += (parseInt(pastelFrangoPassasM.value) || 0) * 8.00;
-        total += (parseInt(pastelFrangoPassasG.value) || 0) * 10.50;
+        total += (parseInt(pastelFrangoPassasM.value) || 0) * 11.00;
+        total += (parseInt(pastelFrangoPassasG.value) || 0) * 13.00;
 
-        total += (parseInt(pastelFrangoRicotaM.value) || 0) * 8.00;
-        total += (parseInt(pastelFrangoRicotaG.value) || 0) * 13.00;
+        total += (parseInt(pastelFrangoRicotaM.value) || 0) * 10.50;
+        total += (parseInt(pastelFrangoRicotaG.value) || 0) * 15.50;
 
-        total += (parseInt(pastel4QueijosM.value) || 0) * 8.50;
-        total += (parseInt(pastel4QueijosG.value) || 0) * 13.50;
+        total += (parseInt(pastel4QueijosM.value) || 0) * 11.00;
+        total += (parseInt(pastel4QueijosG.value) || 0) * 16.00;
 
-        total += (parseInt(pastelCalabresaM.value) || 0) * 8.00;
-        total += (parseInt(pastelCalabresaG.value) || 0) * 12.50;
+        total += (parseInt(pastelCalabresaM.value) || 0) * 10.50;
+        total += (parseInt(pastelCalabresaG.value) || 0) * 15.50;
 
-        total += (parseInt(pastelMistoM.value) || 0) * 7.50;
-        total += (parseInt(pastelMistoG.value) || 0) * 12.00;
+        total += (parseInt(pastelMistoM.value) || 0) * 10.00;
+        total += (parseInt(pastelMistoG.value) || 0) * 14.50;
 
-        total += (parseInt(pastelCarneSecaM.value) || 0) * 8.00;
-        total += (parseInt(pastelCarneSecaG.value) || 0) * 14.50;
+        total += (parseInt(pastelCarneSecaM.value) || 0) * 10.50;
+        total += (parseInt(pastelCarneSecaG.value) || 0) * 17.00;
 
-        total += (parseInt(pastelCarneSecaCatupiryM.value) || 0) * 8.50;
-        total += (parseInt(pastelCarneSecaCatupiryG.value) || 0) * 15.50;
+        total += (parseInt(pastelCarneSecaCatupiryM.value) || 0) * 11.00;
+        total += (parseInt(pastelCarneSecaCatupiryG.value) || 0) * 18.00;
 
-        total += (parseInt(pastelPortuguesaM.value) || 0) * 8.50;
-        total += (parseInt(pastelPOrtuguesaG.value) || 0) * 15.50;
+        total += (parseInt(pastelPortuguesaM.value) || 0) * 11.00;
+        total += (parseInt(pastelPOrtuguesaG.value) || 0) * 18.00;
 
-        total += (parseInt(pastelChocolateM.value) || 0) * 8.00;
-        total += (parseInt(pastelChocolateG.value) || 0) * 13.00;
+        total += (parseInt(pastelChocolateM.value) || 0) * 10.50;
+        total += (parseInt(pastelChocolateG.value) || 0) * 15.50;
 
-        total += (parseInt(pastelRomeuM.value) || 0) * 8.00;
-        total += (parseInt(pastelRomeuG.value) || 0) * 13.00;
+        total += (parseInt(pastelRomeuM.value) || 0) * 10.50;
+        total += (parseInt(pastelRomeuG.value) || 0) * 15.50;
 
         //PIZZA
-        total += (parseInt(pizzaCalabresa.value) || 0) * 28.50;
-        total += (parseInt(pizzaFrango.value) || 0) * 28.50;
-        total += (parseInt(pizzaFrangoCatupiry.value) || 0) * 30.50;
-        total += (parseInt(pizzaCarneSeca.value) || 0) * 32.00;
-        total += (parseInt(pizzaCarneSecaCatupiry.value) || 0) * 33.50;
-        total += (parseInt(pizzaBolonhesa.value) || 0) * 28.00;
-        total += (parseInt(pizzaMista.value) || 0) * 27.50;
-        total += (parseInt(pizzaModa.value) || 0) * 32.50;
-        total += (parseInt(pizzaPortuguesa.value) || 0) * 30.50;
-        total += (parseInt(pizzaMarguerita.value) || 0) * 29.00;
-        total += (parseInt(pizzaMussarela.value) || 0) * 26.50;
-        total += (parseInt(pizzaBacon.value) || 0) * 30.00;
-        total += (parseInt(pizzaChocolate.value) || 0) * 30.00;    
+        total += (parseInt(pizzaCalabresa.value) || 0) * 31.00;
+        total += (parseInt(pizzaFrango.value) || 0) * 31.00;
+        total += (parseInt(pizzaFrangoCatupiry.value) || 0) * 33.00;
+        total += (parseInt(pizzaCarneSeca.value) || 0) * 34.50;
+        total += (parseInt(pizzaCarneSecaCatupiry.value) || 0) * 36.00;
+        total += (parseInt(pizzaBolonhesa.value) || 0) * 30.50;
+        total += (parseInt(pizzaMista.value) || 0) * 30.00;
+        total += (parseInt(pizzaModa.value) || 0) * 35.00;
+        total += (parseInt(pizzaPortuguesa.value) || 0) * 33.00;
+        total += (parseInt(pizzaMarguerita.value) || 0) * 31.50;
+        total += (parseInt(pizzaMussarela.value) || 0) * 29.00;
+        total += (parseInt(pizzaBacon.value) || 0) * 37.00;
+        total += (parseInt(pizzaChocolate.value) || 0) * 36.00;    
         
         //CALZONES
-        total += (parseInt(calzoneFrango.value) || 0) * 17.50;
-        total += (parseInt(calzoneFrangoCatupiry.value) || 0) * 18.00;
-        total += (parseInt(calzoneFrangoRicota.value) || 0) * 14.00;
-        total += (parseInt(calzoneCarne.value) || 0) * 14.00;
-        total += (parseInt(calzoneCarneSeca.value) || 0) * 17.50;
-        total += (parseInt(calzoneCarneSecaCatupiry.value) || 0) * 19.00;
-        total += (parseInt(calzoneMisto.value) || 0) * 12.50;
-        total += (parseInt(calzoneModa.value) || 0) * 20.00;
+        total += (parseInt(calzoneFrango.value) || 0) * 20.00;
+        total += (parseInt(calzoneFrangoCatupiry.value) || 0) * 20.50;
+        total += (parseInt(calzoneFrangoRicota.value) || 0) * 16.50;
+        total += (parseInt(calzoneCarne.value) || 0) * 16.50;
+        total += (parseInt(calzoneCarneSeca.value) || 0) * 20.00;
+        total += (parseInt(calzoneCarneSecaCatupiry.value) || 0) * 21.50;
+        total += (parseInt(calzoneMisto.value) || 0) * 15.00;
+        total += (parseInt(calzoneModa.value) || 0) * 22.50;
         total += (parseInt(calzonePortuguesa.value) || 0) * 16.50;
-        total += (parseInt(calzoneQueijo.value) || 0) * 11.50;
-        total += (parseInt(calzoneChocolate.value) || 0) * 14.50;
-        total += (parseInt(calzoneRomeu.value) || 0) * 14.50;
+        total += (parseInt(calzoneQueijo.value) || 0) * 14.00;
+        total += (parseInt(calzoneChocolate.value) || 0) * 17.00;
+        total += (parseInt(calzoneRomeu.value) || 0) * 17.00;
 
         //BEBIDAS
-        total += (parseInt(coca1l.value) || 0) * 9.00;
+        total += (parseInt(coca1l.value) || 0) * 10.00;
         total += (parseInt(coca2l.value) || 0) * 14.00;
         total += (parseInt(guarana1l.value) || 0) * 8.00;
         total += (parseInt(saoGeraldo1l.value) || 0) * 9.00;
-        total += (parseInt(saoGeraldo2l.value) || 0) * 13.00;
+        total += (parseInt(saoGeraldo2l.value) || 0) * 15.00;
         total += (parseInt(cocaLata.value) || 0) * 5.00;
         total += (parseInt(saoGeraldoLata.value) || 0) * 5.00;
         total += (parseInt(sucoGoiaba.value) || 0) * 4.00;
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function(){
         total += (parseInt(presunto.value) || 0) * 4.00;
         total += (parseInt(catupiry.value) || 0) * 3.00;
         total += (parseInt(ricota.value) || 0) * 4.00;
-        total += (parseInt(creamCheese.value) || 0) * 4.00;
+        total += (parseInt(creamCheese.value) || 0) * 8.00;
         total += (parseInt(maionese.value) || 0) * 0.00;
         total += (parseInt(ketchup.value) || 0) * 0.00;
 
