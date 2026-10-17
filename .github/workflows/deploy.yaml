@@ -18,7 +18,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps:https://github.com }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
@@ -31,9 +31,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Se o seu index.html estiver na raiz do projeto, deixe '.'
-          # Se estiver dentro de uma pasta (ex: public), mude para './public'
           path: '.' 
 
       - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
