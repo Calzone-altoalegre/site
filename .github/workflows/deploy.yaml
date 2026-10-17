@@ -1,15 +1,13 @@
-name: Deploy manual para o GitHub Pages
+name: Deploy GitHub Pages
 
 on:
   workflow_dispatch:
 
-# Permissões necessárias para o GitHub Actions fazer o deploy nas Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Garante que apenas um deploy rode por vez
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -30,7 +28,6 @@ jobs:
       - name: Enviar os arquivos HTML/CSS
         uses: actions/upload-pages-artifact@v3
         with:
-          # Se o seu index.html estiver na raiz do projeto, deixe '.'
           path: '.' 
 
       - name: Publicar no GitHub Pages
