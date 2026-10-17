@@ -1,0 +1,39 @@
+name: Deploy manual para o GitHub Pages
+
+on:
+  workflow_dispatch:
+
+# Permissões necessárias para o GitHub Actions fazer o deploy nas Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Garante que apenas um deploy rode por vez
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps:https://github.com }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar o Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar os arquivos HTML/CSS
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Se o seu index.html estiver na raiz do projeto, deixe '.'
+          # Se estiver dentro de uma pasta (ex: public), mude para './public'
+          path: '.' 
+
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
